@@ -24,8 +24,8 @@ body {
     background-image: url(background_b01.png);
     color: black;
     padding: 0;
-    border-right: 1px solid #003D28;
-    border-left: 1px solid #003D28;
+    border-right: 1px solid {{ theme_maincolor }};
+    border-left: 1px solid {{ theme_maincolor }};
 
     margin: 0px 40px 0px 40px;
 }
@@ -49,6 +49,13 @@ div.body {
     padding: 0.5em 20px 20px 20px;
 }
 
+{%- if theme_rightsidebar|tobool %}
+div.bodywrapper {
+    margin: 0 240px 0 0;
+    border-right: 1px solid #ccc;
+}
+{%- endif %}
+
 div.related {
     font-size: 1em;
 
@@ -57,7 +64,7 @@ div.related {
 }
 
 div.related ul {
-    background-color: #003D28;
+    background-color: {{ theme_maincolor }};
     height: 100%;
     overflow: hidden;
     border-top: 1px solid #ddd;
@@ -97,6 +104,9 @@ div.sphinxsidebar {
     margin: 0;
     padding: 0.5em 12px 12px 12px;
     width: 210px;
+    {%- if theme_rightsidebar|tobool %}
+    float: right;
+    {%- endif %}
     font-size: 1em;
     text-align: left;
 }
@@ -106,8 +116,8 @@ div.sphinxsidebar h3, div.sphinxsidebar h4 {
     font-size: 1em;
     padding: 0.1em 0 0.1em 0.5em;
     color: white;
-    border: 1px solid #003D28;
-    background-color: #003D28;
+    border: 1px solid {{ theme_maincolor }};
+    background-color: {{ theme_maincolor }};
 }
 
 div.sphinxsidebar h3 a {
@@ -126,24 +136,24 @@ div.sphinxsidebar ul ul {
 }
 
 div.sphinxsidebar input {
-    border: 1px solid #003D28;
+    border: 1px solid {{ theme_maincolor }};
 }
 
 div.footer {
     background-color: white;
-    color: #003D28;
+    color: {{ theme_maincolor }};
     padding: 3px 8px 3px 0;
     clear: both;
     font-size: 0.8em;
     text-align: right;
-    border-bottom: 1px solid #003D28;
+    border-bottom: 1px solid {{ theme_maincolor }};
 
     -moz-box-shadow: 2px 2px 5px #000;
     -webkit-box-shadow: 2px 2px 5px #000;
 }
 
 div.footer a {
-    color: #003D28;
+    color: {{ theme_maincolor }};
     text-decoration: underline;
 }
 
@@ -154,12 +164,12 @@ p {
 }
 
 a {
-    color: #003D28;
+    color: {{ theme_maincolor }};
     text-decoration: none;
 }
 
 a:hover {
-    color: #003D28;
+    color: {{ theme_maincolor }};
     text-decoration: underline;
 }
 
@@ -168,7 +178,7 @@ div.body a {
 }
 
 h1, h2, h3 {
-    color: #003D28;
+    color: {{ theme_maincolor }};
 }
 
 h1 {
@@ -181,7 +191,7 @@ h2 {
     margin: 1.3em 0 0.2em 0;
     font-size: 1.35em;
     padding-bottom: .5em;
-    border-bottom: 1px solid #003D28;
+    border-bottom: 1px solid {{ theme_maincolor }};
 }
 
 h3 {
