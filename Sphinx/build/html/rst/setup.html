@@ -54,6 +54,38 @@
             
   <div class="section" id="id1">
 <h1>セットアップ方法<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>PlartformIOはコマンドでインストールしていきます。Windows,Mac,LinuxどのOSにも対応しております。</p>
+<p>大まかなステップ</p>
+<p>・Python 環境を整える(2.7専用)</p>
+<p>・pipを使ってPlatformIO環境をインストール</p>
+<p>・コマンドの確認</p>
+<p>以上</p>
+<div class="section" id="windows">
+<h2>▼　Windowsの場合<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<p>・Python 2.7をインストール(3.xでは動きません涙)</p>
+<p><a class="reference external" href="https://www.python.org/downloads/release/python-2714/">https://www.python.org/downloads/release/python-2714/</a></p>
+<p>この辺で、32bitの方は「Windows x86 MSI installer」 64bitの方は「Windows x86-64 MSI installer 」を。</p>
+<p>全てOKで進めて行けば、今だとPATHまで自動で入ると思われるので、再起動後にコマンドプロントで「python -V」を入力します。</p>
+<p>無事にコマンドが認識すればOK。</p>
+<p>続いて pipコマンドを入れます。</p>
+<p>・pipコマンドをインストール</p>
+<p><a class="reference external" href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a></p>
+<p>より、ソースをダウンロードして、コマンドよりcdやdirを駆使して 「python get-pip.py」 を実行します。</p>
+<p>無事に完了すると、コマンド pip が使用できるように成ります。</p>
+<p>・pipを使ってPlatformIOをインストールする。</p>
+<p>コマンドで「pip install platformio」で全自動でGCCやらヘッダーファイルやら何やら全部インストールが出来ます。</p>
+<p>・インストールが終わったら、PlatformIO用のコマンドが動くか確認</p>
+<p>PlatformIOのコマンドは２種類あり、</p>
+<p>&gt; platformio</p>
+<p>と、</p>
+<p>&gt; pio</p>
+<p>の２種類です。どちらも同じ動きをしますが、記述が面倒なので「pio」を主力として記述していきます。</p>
+<p>もし、大きな力でpioが他のコマンドとかぶる際は、仕方がなくplatformioと全部書くようにしましょう。</p>
+<p>以上でPlatformIOが使えるようになったと思います！（多分）</p>
+</div>
+<div class="section" id="mac">
+<h2>▼　Macの場合<a class="headerlink" href="#mac" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
 
