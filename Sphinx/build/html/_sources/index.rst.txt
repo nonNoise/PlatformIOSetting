@@ -8,13 +8,13 @@ Platform.IOでマイコン開発環境を整える
 このサイトは、mbedやArduinoなど幅広いボードを開発出来、オフライン開発環境を超手早く構築できる
 PlatformIOの紹介と手順をまとめたサイトです。
 
-.. toctree::
-    :maxdepth: 1
+    .. toctree::
+        :maxdepth: 1
 
-    rst/main
-    rst/setup
-    rst/platformio_init
-    
+        rst/main
+        rst/setup
+        rst/platformio_init
+        
 
 
 
