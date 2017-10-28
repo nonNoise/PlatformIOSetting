@@ -42,15 +42,23 @@ https://bootstrap.pypa.io/get-pip.py
 
 コマンドで「pip install platformio」で全自動でGCCやらヘッダーファイルやら何やら全部インストールが出来ます。
 
+::
+
+    pip install platformio
+
 ・インストールが終わったら、PlatformIO用のコマンドが動くか確認
 
 PlatformIOのコマンドは２種類あり、
 
-> platformio
+::
+
+    platformio
 
 と、
 
-> pio
+::
+
+    pio
 
 の２種類です。どちらも同じ動きをしますが、記述が面倒なので「pio」を主力として記述していきます。
 
@@ -59,7 +67,15 @@ PlatformIOのコマンドは２種類あり、
 以上でPlatformIOが使えるようになったと思います！（多分）
 
 
-▼　Macの場合
+▼　Mac,Linuxの場合
 --------------------------------------------------
+
+Pythonがデフォルトでインストールされているため、Super-Quick手法でインストールします。
+
+::
+
+    python -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/develop/scripts/get-platformio.py)"
+
+以上でPlatformIOが使えるようになったと思います！（多分）
 
 

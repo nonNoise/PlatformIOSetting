@@ -1,0 +1,268 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="jp">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>PratformIOを使ってみよう &#8212; Platform.IOでマイコン開発環境を整えてみる  documentation</title>
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NXP LPCシリーズの開発方法" href="nxplpc.html" />
+    <link rel="prev" title="セットアップ方法" href="setup.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="nxplpc.html" title="NXP LPCシリーズの開発方法"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="setup.html" title="セットアップ方法"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Platform.IOでマイコン開発環境を整えてみる  documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pratformio">
+<h1>PratformIOを使ってみよう<a class="headerlink" href="#pratformio" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="platform-io">
+<h2>▼　Platform.IOで使えるコマンド<a class="headerlink" href="#platform-io" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>基本形<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span>pio [OPTIONS] COMMAND
+platformio [OPTIONS] COMMAND
+
+※コマンドは両方使用することができます。ただ毎回platformioと記述するのが面倒なので、pioで慣れてしまうのがおすすめです。どちらも同じ動きをします。
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Options:
+
+    --version          Show the version and exit.
+        PlatformIOのバージョン表示
+
+    -f, --force        Force to accept any confirmation prompts.
+
+    -c, --caller TEXT  Caller ID (service).
+
+    -h, --help         Show this message and exit.
+        Platformのコマンドの意味などを確認できます。
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Commands:
+
+    account   Manage PIO Account
+        PlatformIOに登録したアカウントにアクセスしたりできます。
+
+    boards    Embedded Board Explorer
+        PlatformIOで開発できるボードを確認できます。
+
+    ci        Continuous Integration
+
+    debug     PIO Unified Debugger
+
+    device    Monitor device or list existing
+        PlatformIOに登録されているデバイスの確認ができる
+
+    init      Initialize PlatformIO project or update existing
+        PlatformIOを新規に作成する際の初期化コマンド
+
+    lib       Library Manager
+
+    platform  Platform Manager
+        PlatformIOに登録されているプラットフォーム（開発環境）への操作
+
+    remote    PIO Remote
+
+    run       Process project environments
+        プロジェクトのmakeや書き込み等一括で行うコマンド
+
+    settings  Manage PlatformIO settings
+        PlatformIOの設定の確認や変更ができます。
+
+    test      Local Unit Testing
+
+    update    Update installed platforms, packages and libraries
+        Platformやライブラリをアップデートします。
+
+    upgrade   Upgrade PlatformIO to the latest version
+        PlatformIO自体のアップグレードができます。
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>最初の設定<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pio</span> <span class="n">init</span> <span class="o">--</span><span class="n">board</span> <span class="o">&lt;</span><span class="n">ボードID</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>ボードIDは以下のコマンドより確認することができます。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pio</span> <span class="n">boards</span>
+    <span class="n">これで全部表示</span>
+
+<span class="n">pio</span> <span class="n">boards</span> <span class="n">arduino</span>
+    <span class="n">Arduinoとして登録されているボード一覧</span>
+
+<span class="n">pio</span> <span class="n">boards</span> <span class="n">mbed</span>
+    <span class="n">mbedとして登録されているボード一覧</span>
+
+<span class="n">pio</span> <span class="n">boards</span> <span class="n">stm32</span>
+    <span class="n">STM32系列のボード一覧</span>
+
+<span class="n">pio</span> <span class="n">boards</span> <span class="o">&gt;</span> <span class="n">boards</span><span class="o">.</span><span class="n">TEXT</span>
+    <span class="n">ボード一覧をテキストに保存</span>
+</pre></div>
+</div>
+<p>PlatformIO, version 3.4.1(2017/10/28　現在登録されているボードリスト)</p>
+<p>試しに、ArduinoUno の環境を整えます。ArduinoUnoのボードIDは&quot;uno&quot;となりますので（わかりづら！）</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pio</span> <span class="n">init</span> <span class="o">--</span><span class="n">board</span> <span class="n">uno</span>
+</pre></div>
+</div>
+<p>するど、フォルダーの中に</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>platformio.ini - Project Configuration File
+    PlatformIOの設定ファイル（主にボードIDやファームウェアなど)
+
+src - Put your source files here
+    プログラムを入れるフォルダ。
+
+lib - Put here project specific (private) libraries
+    ダウンロードしたライブラリなどを入れるフォルダ
+</pre></div>
+</div>
+<p>が出力されます。</p>
+<p>試しにLチカプログラム Blinks を試して見たいと思います。</p>
+<p>以下のプログラムを　scrフォルダの中で <strong>main.cpp</strong>　というファイルを作り貼り付けます。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/**</span>
+<span class="o">*</span> <span class="n">Blink</span>
+<span class="o">*</span>
+<span class="o">*</span> <span class="n">Turns</span> <span class="n">on</span> <span class="n">an</span> <span class="n">LED</span> <span class="n">on</span> <span class="k">for</span> <span class="n">one</span> <span class="n">second</span><span class="p">,</span>
+<span class="o">*</span> <span class="n">then</span> <span class="n">off</span> <span class="k">for</span> <span class="n">one</span> <span class="n">second</span><span class="p">,</span> <span class="n">repeatedly</span><span class="o">.</span>
+<span class="o">*/</span>
+<span class="c1">#include &quot;Arduino.h&quot;</span>
+
+<span class="c1">#ifndef LED_BUILTIN</span>
+<span class="c1">#define LED_BUILTIN 13</span>
+<span class="c1">#endif</span>
+
+<span class="n">void</span> <span class="n">setup</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="o">//</span> <span class="n">initialize</span> <span class="n">LED</span> <span class="n">digital</span> <span class="n">pin</span> <span class="k">as</span> <span class="n">an</span> <span class="n">output</span><span class="o">.</span>
+    <span class="n">pinMode</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">void</span> <span class="n">loop</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="o">//</span> <span class="n">turn</span> <span class="n">the</span> <span class="n">LED</span> <span class="n">on</span> <span class="p">(</span><span class="n">HIGH</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">voltage</span> <span class="n">level</span><span class="p">)</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+
+    <span class="o">//</span> <span class="n">wait</span> <span class="k">for</span> <span class="n">a</span> <span class="n">second</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+
+    <span class="o">//</span> <span class="n">turn</span> <span class="n">the</span> <span class="n">LED</span> <span class="n">off</span> <span class="n">by</span> <span class="n">making</span> <span class="n">the</span> <span class="n">voltage</span> <span class="n">LOW</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+
+    <span class="o">//</span> <span class="n">wait</span> <span class="k">for</span> <span class="n">a</span> <span class="n">second</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>コピペとかが面倒な際は、以下のコマンドでダウンロードしてきます。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">~</span>
+</pre></div>
+</div>
+<p>blinksプログラムが整ったら、<strong>run</strong> コマンドでコンパイルをします。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pio</span> <span class="n">run</span>
+</pre></div>
+</div>
+<p>すると、このタイミングでArudinoUNOに必要な開発環境(主にGCC周りや書き込み用ライブラリ)を自動でダウンロードからインストールまで行います。</p>
+<p>この動作が大変、大変便利で気持ちよく開発を行うことができます。真似して行きたい環境セットアップ手法ですね。</p>
+<p>開発環境のインストールが行われて無事にコンパイルも行われると、最後に以下のような表示がされるはずです。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">AVR</span> <span class="n">Memory</span> <span class="n">Usage</span>
+<span class="o">----------------</span>
+<span class="n">Device</span><span class="p">:</span> <span class="n">atmega328p</span>
+
+<span class="n">Program</span><span class="p">:</span>     <span class="mi">928</span> <span class="nb">bytes</span> <span class="p">(</span><span class="mf">2.8</span><span class="o">%</span> <span class="n">Full</span><span class="p">)</span>
+<span class="p">(</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="o">.</span><span class="n">data</span> <span class="o">+</span> <span class="o">.</span><span class="n">bootloader</span><span class="p">)</span>
+
+<span class="n">Data</span><span class="p">:</span>          <span class="mi">9</span> <span class="nb">bytes</span> <span class="p">(</span><span class="mf">0.4</span><span class="o">%</span> <span class="n">Full</span><span class="p">)</span>
+<span class="p">(</span><span class="o">.</span><span class="n">data</span> <span class="o">+</span> <span class="o">.</span><span class="n">bss</span> <span class="o">+</span> <span class="o">.</span><span class="n">noinit</span><span class="p">)</span>
+
+<span class="o">=========================</span> <span class="p">[</span><span class="n">SUCCESS</span><span class="p">]</span> <span class="n">Took</span> <span class="mf">2.38</span> <span class="n">seconds</span> <span class="o">=========================</span>
+</pre></div>
+</div>
+<p>コンパイルまでの時間の確認も面白いですが、肝心な項目は <strong>使用メモリー</strong> の箇所です。
+自分が作成したプログラムがマイコンのメモリーをどれくらい消費しているか。
+プログラマーは常にマイコンのメモリー空間を意識しながら書いて行くと、大変良いプログラムが出来上がると思います。</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>▼まとめ<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>以上の内容でPlatformIOの基本的なコマンとの流れが掴めたかと思います。</p>
+<p>大まかにまとめると</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>pio boards
+    これで使いたいボードIDを探す
+pio init --board uno
+    これでボードID&quot;uno&quot;を選択して初期化
+scrフォルダにmainソースを書く
+pio run
+    runコマンドでコンパイルを行う。GCC環境とかがなければ自動でインストールする。
+</pre></div>
+</div>
+<p>こんな感じですかね。</p>
+<p>次回以降、それぞれの開発環境に合わせたコマンドや書き込み方法をまとめて行きます。</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="nxplpc.html" title="NXP LPCシリーズの開発方法"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="setup.html" title="セットアップ方法"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Platform.IOでマイコン開発環境を整えてみる  documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, ArtifactNoise.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+    </div>
+  </body>
+</html>

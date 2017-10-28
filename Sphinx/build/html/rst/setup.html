@@ -5,13 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="jp">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>セットアップ方法 &#8212; PlatformIO日本語情報サイト 0.1 documentation</title>
+    <title>セットアップ方法 &#8212; Platform.IOでマイコン開発環境を整えてみる  documentation</title>
     <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.1',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="NXP LPCシリーズの開発方法" href="nxplpc.html" />
+    <link rel="next" title="PratformIOを使ってみよう" href="platformio_init.html" />
     <link rel="prev" title="PlatformIOとは何ですか？" href="main.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
@@ -39,12 +39,12 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="nxplpc.html" title="NXP LPCシリーズの開発方法"
+          <a href="platformio_init.html" title="PratformIOを使ってみよう"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="main.html" title="PlatformIOとは何ですか？"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">PlatformIO日本語情報サイト 0.1 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Platform.IOでマイコン開発環境を整えてみる  documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -74,17 +74,29 @@
 <p>無事に完了すると、コマンド pip が使用できるように成ります。</p>
 <p>・pipを使ってPlatformIOをインストールする。</p>
 <p>コマンドで「pip install platformio」で全自動でGCCやらヘッダーファイルやら何やら全部インストールが出来ます。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">platformio</span>
+</pre></div>
+</div>
 <p>・インストールが終わったら、PlatformIO用のコマンドが動くか確認</p>
 <p>PlatformIOのコマンドは２種類あり、</p>
-<p>&gt; platformio</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">platformio</span>
+</pre></div>
+</div>
 <p>と、</p>
-<p>&gt; pio</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pio</span>
+</pre></div>
+</div>
 <p>の２種類です。どちらも同じ動きをしますが、記述が面倒なので「pio」を主力として記述していきます。</p>
 <p>もし、大きな力でpioが他のコマンドとかぶる際は、仕方がなくplatformioと全部書くようにしましょう。</p>
 <p>以上でPlatformIOが使えるようになったと思います！（多分）</p>
 </div>
-<div class="section" id="mac">
-<h2>▼　Macの場合<a class="headerlink" href="#mac" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mac-linux">
+<h2>▼　Mac,Linuxの場合<a class="headerlink" href="#mac-linux" title="Permalink to this headline">¶</a></h2>
+<p>Pythonがデフォルトでインストールされているため、Super-Quick手法でインストールします。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/develop/scripts/get-platformio.py)&quot;</span>
+</pre></div>
+</div>
+<p>以上でPlatformIOが使えるようになったと思います！（多分）</p>
 </div>
 </div>
 
@@ -100,17 +112,17 @@
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="nxplpc.html" title="NXP LPCシリーズの開発方法"
+          <a href="platformio_init.html" title="PratformIOを使ってみよう"
              >next</a> |</li>
         <li class="right" >
           <a href="main.html" title="PlatformIOとは何ですか？"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">PlatformIO日本語情報サイト 0.1 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Platform.IOでマイコン開発環境を整えてみる  documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, ArtifactNoise.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

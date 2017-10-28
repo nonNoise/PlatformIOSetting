@@ -36,6 +36,6 @@ $(window).resize(function(){
         $("li.nav-item-0 a").text("Top");
     }
     else {
-        $("li.nav-item-0 a").text("PlatformIO日本語情報サイト 0.1 documentation");
+        $("li.nav-item-0 a").text("Platform.IOでマイコン開発環境を整えてみる  documentation");
     }
 });
