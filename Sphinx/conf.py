@@ -93,8 +93,8 @@ todo_include_todos = False
 #    }
 html_theme = 'basicstrap'
 html_theme_options = {
-    'rightsidebar': True,
-    'content_fixed': True,
+    'rightsidebar': False,
+    'content_fixed': False,
 
     'header_inverse': False,
     'relbar_inverse': False,
