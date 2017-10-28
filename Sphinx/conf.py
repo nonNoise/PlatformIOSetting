@@ -96,7 +96,7 @@ html_theme_options = {
     'header_inverse': False,
     'relbar_inverse': False,
     'inner_theme': True,
-    'inner_theme_name': 'bootswatch-cosmo',
+    'inner_theme_name': 'bootswatch-slate',
 }
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
