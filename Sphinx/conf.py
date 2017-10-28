@@ -87,11 +87,29 @@ html_theme = 'bizstyle_costam'
 html_theme_path = ['_theme/']
 
 #html_theme = 'default'
+#html_theme_options = {
+#    'maincolor' : "#003D28",
+#    'nosidebar': True,
+#    }
+html_theme = 'basicstrap'
 html_theme_options = {
-    'maincolor' : "#003D28",
-    'nosidebar': True, 
- 
-    }
+    'rightsidebar': True,
+    'content_fixed': True,
+    'content_width': '1020px',
+
+    'header_inverse': False,
+    'relbar_inverse': False,
+    'inner_theme': True,
+    'inner_theme_name': 'bootswatch-flatly',
+        # Enable Google Web Font. Defaults to false
+    'googlewebfont': False,
+    # Set the URL of Google Web Font's CSS.
+    # Defaults to 'http://fonts.googleapis.com/css?family=Text+Me+One'
+    'googlewebfont_url': 'http://fonts.googleapis.com/css?family=Lily+Script+One',  # NOQA
+    # Set the Style of Google Web Font's CSS.
+    # Defaults to "font-family: 'Text Me One', sans-serif;"
+    'googlewebfont_style': u"font-family: 'Lily Script One' cursive;",
+}    
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
