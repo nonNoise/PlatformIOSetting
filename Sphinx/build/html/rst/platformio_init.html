@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="NXP LPCシリーズの開発方法" href="nxplpc.html" />
+    <link rel="next" title="Arduinoシリーズの開発方法" href="arduino.html" />
     <link rel="prev" title="セットアップ方法" href="setup.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
@@ -39,7 +39,7 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="nxplpc.html" title="NXP LPCシリーズの開発方法"
+          <a href="arduino.html" title="Arduinoシリーズの開発方法"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="setup.html" title="セットアップ方法"
@@ -141,6 +141,8 @@ platformio [OPTIONS] COMMAND
 </pre></div>
 </div>
 <p>PlatformIO, version 3.4.1(2017/10/28　現在登録されているボードリスト)</p>
+<blockquote>
+<div><a class="reference external" href="https://raw.githubusercontent.com/nonNoise/PlatformIO-MakeIt/master/Sphinx/rst/boards.txt">https://raw.githubusercontent.com/nonNoise/PlatformIO-MakeIt/master/Sphinx/rst/boards.txt</a></div></blockquote>
 <p>試しに、ArduinoUno の環境を整えます。ArduinoUnoのボードIDは&quot;uno&quot;となりますので（わかりづら！）</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pio</span> <span class="n">init</span> <span class="o">--</span><span class="n">board</span> <span class="n">uno</span>
 </pre></div>
@@ -194,7 +196,7 @@ lib - Put here project specific (private) libraries
 </pre></div>
 </div>
 <p>コピペとかが面倒な際は、以下のコマンドでダウンロードしてきます。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">~</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nonNoise</span><span class="o">/</span><span class="n">PlatformIO</span><span class="o">-</span><span class="n">MakeIt</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">Sphinx</span><span class="o">/</span><span class="n">sorce</span><span class="o">/</span><span class="n">arduino</span><span class="o">/</span><span class="n">blinks</span><span class="o">.</span><span class="n">cpp</span>
 </pre></div>
 </div>
 <p>blinksプログラムが整ったら、<strong>run</strong> コマンドでコンパイルをします。</p>
@@ -252,7 +254,7 @@ pio run
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="nxplpc.html" title="NXP LPCシリーズの開発方法"
+          <a href="arduino.html" title="Arduinoシリーズの開発方法"
              >next</a> |</li>
         <li class="right" >
           <a href="setup.html" title="セットアップ方法"

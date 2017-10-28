@@ -99,7 +99,8 @@ PratformIOを使ってみよう
         ボード一覧をテキストに保存
 
 PlatformIO, version 3.4.1(2017/10/28　現在登録されているボードリスト)
-    
+
+    https://raw.githubusercontent.com/nonNoise/PlatformIO-MakeIt/master/Sphinx/rst/boards.txt
 
 試しに、ArduinoUno の環境を整えます。ArduinoUnoのボードIDは"uno"となりますので（わかりづら！）
 
@@ -165,7 +166,7 @@ PlatformIO, version 3.4.1(2017/10/28　現在登録されているボードリ�
 
 ::
 
-    wget ~
+    wget https://raw.githubusercontent.com/nonNoise/PlatformIO-MakeIt/master/Sphinx/sorce/arduino/blinks.cpp
 
 blinksプログラムが整ったら、**run** コマンドでコンパイルをします。
 
