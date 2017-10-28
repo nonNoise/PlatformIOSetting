@@ -95,7 +95,7 @@ html_theme = 'basicstrap'
 html_theme_options = {
     'rightsidebar': True,
     'content_fixed': True,
-    'content_width': '1020px',
+    'content_width': '1240px',
 
     'header_inverse': False,
     'relbar_inverse': False,
